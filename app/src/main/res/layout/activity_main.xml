@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <example.com.mybankcard.views.FloatLabeledEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="This is the hint" />
+    </example.com.mybankcard.views.FloatLabeledEditText>
+
+    <!-- add some padding -->
+    <example.com.mybankcard.views.FloatLabeledEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fletPadding="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+    </example.com.mybankcard.views.FloatLabeledEditText>
+
+    <!-- password input -->
+    <example.com.mybankcard.views.FloatLabeledEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fletPaddingBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </example.com.mybankcard.views.FloatLabeledEditText>
+
+    <!-- change color of hint text-->
+    <example.com.mybankcard.views.FloatLabeledEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fletPaddingBottom="10dp"
+        app:fletTextAppearance="@style/floatlabelededittext">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Styled Hint"
+            android:inputType="textPassword" />
+    </example.com.mybankcard.views.FloatLabeledEditText>
+
+    <!--银行卡号-->
+
+    <EditText
+        android:id="@+id/mEdtBankCardNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入您的卡号"
+        android:inputType="number"
+        android:maxLength="26"
+        android:maxLines="1" />
+
+    <!--自定义手机号和银行卡-->
+    <example.com.mybankcard.views.RongDivisionEditText
+        android:id="@+id/myDivision"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:hint="输入银行卡卡号"
+        app:sperator=" "
+        app:totalLength="21"
+        app:type="bank" />
+
+    <example.com.mybankcard.views.RongDivisionEditText
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:hint="输入手机卡号"
+        app:sperator=" "
+        app:totalLength="13"
+        app:type="phone" />
+
+    <!--测试EditText监听-->
+
+    <EditText
+        android:id="@+id/et_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="测试下"/>
+</LinearLayout>

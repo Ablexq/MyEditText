@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FloatLabeledEditText">
+        <attr name="fletTextAppearance" format="reference" />
+        <attr name="fletPadding" format="reference|dimension" />
+        <attr name="fletPaddingLeft" format="reference|dimension" />
+        <attr name="fletPaddingTop" format="reference|dimension" />
+        <attr name="fletPaddingRight" format="reference|dimension" />
+        <attr name="fletPaddingBottom" format="reference|dimension" />
+        <attr name="fletBackground" format="reference|color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RongDivisionEditText">
+        <attr name="totalLength" format="integer" />
+        <attr name="sperator" format="string" />
+        <attr name="type">
+            <enum name="phone" value="1" />
+            <enum name="bank" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>
